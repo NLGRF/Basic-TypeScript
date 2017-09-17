@@ -1,7 +1,9 @@
-var emoployee = ["A", "B"];
-emoployee.push("C#");
-emoployee.push("JAVA");
-emoployee.push("500");
-emoployee.push(1000);
-emoployee.push(true);
-console.log(emoployee.toString());
+var p1 = {
+    realname: "Non",
+    hp: 100,
+    weapon: "sword",
+    attack: function () {
+        return "player attack";
+    }
+};
+console.log(p1.attack());

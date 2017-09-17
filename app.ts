@@ -1,7 +1,15 @@
-var emoployee:any[]=["A","B"];
-emoployee.push("C#");
-emoployee.push("JAVA");
-emoployee.push("500");
-emoployee.push(1000);
-emoployee.push(true);
-console.log(emoployee.toString());
+interface Player{
+  realname:string;
+  hp:number;
+  weapon:string;
+  attack:()=>string
+}
+let p1:Player={
+  realname:"Non",
+  hp:100,
+  weapon:"sword",
+  attack:():string=>{
+    return "player attack";
+  }
+}
+console.log(p1.attack());
