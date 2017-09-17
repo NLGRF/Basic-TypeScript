@@ -1,9 +1,6 @@
-var p1 = {
-    realname: "Non",
-    hp: 100,
-    weapon: "sword",
-    attack: function () {
-        return "player attack";
-    }
-};
-console.log(p1.attack());
+var numberConst;
+(function (numberConst) {
+    numberConst[numberConst["pi"] = 3.14] = "pi";
+    numberConst[numberConst["e"] = 2.71] = "e";
+})(numberConst || (numberConst = {}));
+console.log(numberConst.pi * (6 * 6));
