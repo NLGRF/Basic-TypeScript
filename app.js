@@ -1,27 +1,28 @@
-var Employee = /** @class */ (function () {
-    function Employee(id, names, sex, salary) {
-        this.id = id;
-        this.names = names;
-        this.sex = sex;
-        this.salary = salary;
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var Animal = /** @class */ (function () {
+    function Animal(n) {
+        this.name = n;
     }
-    Employee.prototype.display = function () {
-        console.log("ID = " + this.id);
-        console.log("NAME = " + this.names);
-        console.log("SEX = " + this.sex);
-        console.log("SALARY = " + this.salary);
+    Animal.prototype.disp = function () {
+        console.log("My name is " + this.name);
     };
-    // Setter
-    Employee.prototype.setDepartment = function (dep) {
-        this.department = dep;
-    };
-    // Getter
-    Employee.prototype.getDepartment = function () {
-        return this.department;
-    };
-    return Employee;
+    return Animal;
 }());
-var emp1 = new Employee(101, "Non", 1, 500);
-emp1.setDepartment("Programmer");
-emp1.display();
-console.log(emp1.getDepartment());
+var Dog = /** @class */ (function (_super) {
+    __extends(Dog, _super);
+    function Dog() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    return Dog;
+}(Animal));
+var obj = new Dog("Dog Object");
+obj.disp();
