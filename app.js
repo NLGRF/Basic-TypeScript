@@ -1,6 +1,13 @@
-var numberConst;
-(function (numberConst) {
-    numberConst[numberConst["pi"] = 3.14] = "pi";
-    numberConst[numberConst["e"] = 2.71] = "e";
-})(numberConst || (numberConst = {}));
-console.log(numberConst.pi * (6 * 6));
+function showMessage() {
+    console.log("TypeScript Tutorial");
+}
+// Optional Parameter
+function addProduct(id, name, price) {
+    console.log("ID :" + id);
+    console.log("NAMES :" + name);
+    if (price != undefined) {
+        console.log("PRICE :" + price);
+    }
+}
+addProduct(100, "Iphone");
+addProduct(101, "Iphone", 15000);
