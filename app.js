@@ -12,8 +12,8 @@ var Animal = /** @class */ (function () {
     function Animal(n) {
         this.name = n;
     }
-    Animal.prototype.disp = function () {
-        console.log("My name is " + this.name);
+    Animal.prototype.display = function () {
+        console.log("My name is Super Class" + this.name);
     };
     return Animal;
 }());
@@ -22,7 +22,12 @@ var Dog = /** @class */ (function (_super) {
     function Dog() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
+    Dog.prototype.display = function () {
+        // have super => use method Animal
+        _super.prototype.display.call(this);
+        console.log("My name is Dog Class" + this.name);
+    };
     return Dog;
 }(Animal));
 var obj = new Dog("Dog Object");
-obj.disp();
+obj.display();
