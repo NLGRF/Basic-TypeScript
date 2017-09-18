@@ -1,18 +1,14 @@
-class Animal{
-  public name:string;
-  constructor(n:string){
-    this.name=n;
+class Windows{
+  static width:number;
+  static height:number;
+  static showWidth():void{
+    console.log("Width :"+Windows.width);
   }
-  display():void{
-    console.log("My name is Super Class"+this.name);
-  }
-}
-class Dog extends Animal{
-  display():void{
-    // have super => use method Animal
-    super.display();
-    console.log("My name is Dog Class"+this.name);
+  static showheight():void{
+    console.log("Height :"+Windows.height);
   }
 }
-var obj=new Dog("Dog Object");
-obj.display();
+Windows.width=1024;
+Windows.height=768;
+Windows.showWidth();
+Windows.showheight();
