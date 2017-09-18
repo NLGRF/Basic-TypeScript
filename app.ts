@@ -5,6 +5,7 @@ class Employee{
   // Female = 0
   private sex:number;
   private salary:number;
+  private department:string;
 
   constructor(id:number,names:string,sex:number,salary:number){
     this.id=id;
@@ -18,8 +19,16 @@ class Employee{
     console.log("SEX = "+this.sex);
     console.log("SALARY = "+this.salary);
   }
+  // Setter
+  setDepartment(dep:string):void{
+    this.department=dep;
+  }
+  // Getter
+  getDepartment():string{
+    return this.department;
+  }
 }
 let emp1=new Employee(101,"Non",1,500);
+emp1.setDepartment("Programmer");
 emp1.display();
-let emp2=new Employee(100,"Grace",0,99);
-emp2.display();
+console.log(emp1.getDepartment());

@@ -11,9 +11,17 @@ var Employee = /** @class */ (function () {
         console.log("SEX = " + this.sex);
         console.log("SALARY = " + this.salary);
     };
+    // Setter
+    Employee.prototype.setDepartment = function (dep) {
+        this.department = dep;
+    };
+    // Getter
+    Employee.prototype.getDepartment = function () {
+        return this.department;
+    };
     return Employee;
 }());
 var emp1 = new Employee(101, "Non", 1, 500);
+emp1.setDepartment("Programmer");
 emp1.display();
-var emp2 = new Employee(100, "Grace", 0, 99);
-emp2.display();
+console.log(emp1.getDepartment());
